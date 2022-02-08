@@ -1,2 +1,22 @@
 <h1>Welcome to chitter</h1>
 <p>lets get started </p>
+<div class="center-block">
+  <div class="form-group-wrap">
+    <h1>Log in</h1>
+    <%= form_tag '/' do %>
+      <div class="form-group">
+        <label for="username", class="control-label">Username:</label>
+        <%= text_field_tag :username, nil, class: "form-control", :required => true %>
+      </div>
+      <div class="form-group">
+        <label for="password", class="control-label">Password:</label>
+        <%= password_field_tag :password, nil, class: "form-control", :required => true %>
+      </div>
+      <div class="form-group">
+        <%= submit_tag "Log in", class: "btn btn-primary" %> 
+      </div>
+    <% end %>
+  </div>
+  <p class="text-center soft-top" >Not yet a member? <a href="/sign_up">Create an account</a> </p>
+</div>
+
